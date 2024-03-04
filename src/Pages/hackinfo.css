@@ -1,0 +1,30 @@
+
+.info:before, .info:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	border-radius: 12px;
+	background: linear-gradient(45deg, #B45AA1B3, #ffffffb3, #6E1ED4B3, #B45AA1B3, #ffffffb3, #6E1ED4B3 );
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.info:after {
+	filter: blur(20px);
+}
